@@ -1,0 +1,32 @@
+# Copy to config.toml (git-ignored) and edit.
+
+[settings]
+lead_days = 7        # warn this many days before a planting window opens or closes
+risk_level = 20      # follow the 20%, 30% or 40% production-loss-risk window
+forecast_days = 5    # days ahead to check for weather alerts
+dry_spell_mm = 10.0  # less rain than this in the period, with the window open = alert
+heavy_rain_mm = 50.0 # a single day above this = heavy rain alert
+notifier = "console" # "console" or "whatsapp"
+state_file = ".state/sent.json"
+
+# One [[watch]] per crop and municipality.
+# The values below are an example. Look up your own IBGE municipality code and
+# coordinates, and the Agritec crop id in the AgroAPI documentation.
+[[watch]]
+id = "example-soy"
+name = "Example farm, Sorriso/MT"
+crop = "soybean"
+municipality_ibge = 5107925
+latitude = -12.5425
+longitude = -55.7211
+# agritec_crop_id = 0          # required for live data
+# recipients = ["5511900000000"]  # WhatsApp numbers, country code first; required when notifier = "whatsapp"
+
+[[watch]]
+id = "example-corn"
+name = "Example farm, Sorriso/MT"
+crop = "corn"
+municipality_ibge = 5107925
+latitude = -12.5425
+longitude = -55.7211
+# agritec_crop_id = 0

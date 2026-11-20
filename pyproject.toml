@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agro-window-alerts"
+version = "0.1.0"
+description = "Planting-window and weather alerts for Brazilian agriculture, built on Embrapa AgroAPI."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Belmiro Gomes Neto" }]
+keywords = ["agriculture", "agtech", "embrapa", "alerts", "brazil", "automation"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+agro-alerts = "agro_window_alerts.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
