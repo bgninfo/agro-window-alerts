@@ -21,7 +21,7 @@ Official planting windows (the Zarc, Brazil's agricultural climate-risk zoning) 
 Requires Python 3.11 or newer.
 
 ```bash
-git clone https://github.com/<your-user>/agro-window-alerts.git
+git clone https://github.com/bgninfo/agro-window-alerts.git
 cd agro-window-alerts
 pip install -e ".[dev]"
 
